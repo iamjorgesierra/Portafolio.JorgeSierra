@@ -1,0 +1,192 @@
+/************ Skills Css ************/
+.skill {
+  position: relative;
+  padding: 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skill-bx {
+  background: #000;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+  max-width: 1100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skill h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.skill p {
+  color: #ccc;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.6em;
+  margin: 14px 0 50px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-slider .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-slider .item img {
+  width: 50%;
+  max-width: 120px;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+/* Carousel Arrows */
+.react-multiple-carousel__arrow {
+  background: transparent !important;
+  border: none;
+  z-index: 2;
+}
+
+.react-multiple-carousel__arrow::before {
+  color: #fff;
+  font-size: 30px;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: -50px;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: -50px;
+}
+
+/************ Responsive ************/
+@media (max-width: 1200px) {
+  .skill {
+    padding: 0 60px;
+  }
+
+  .skill-bx {
+    max-width: 900px;
+    padding: 50px 40px;
+  }
+
+  .skill-slider {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .skill {
+    padding: 40px 30px;
+  }
+
+  .skill-bx {
+    padding: 40px 30px;
+    border-radius: 40px;
+    margin-top: -30px;
+    max-width: 700px;
+  }
+
+  .skill h2 {
+    font-size: 32px;
+  }
+
+  .skill p {
+    font-size: 16px;
+    margin: 14px 0 30px 0;
+    padding: 0 20px;
+  }
+
+  .skill-slider {
+    width: 100%;
+  }
+
+  .skill-slider .item img {
+    width: 70%;
+    max-width: 100px;
+  }
+
+  .react-multiple-carousel__arrow {
+    background: rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+/************ Pantallas pequeñas (móviles) ************/
+@media (max-width: 576px) {
+  .skill {
+    padding: 20px 15px;
+    margin-top: 0;
+  }
+
+  .skill-bx {
+    padding: 25px 20px;
+    border-radius: 20px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .skill h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .skill p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0 25px 0;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .skill-slider {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .skill-slider .item {
+    padding: 10px 5px;
+  }
+
+  .skill-slider .item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  .react-multiple-carousel__arrow {
+    display: none;
+  }
+}
+
+/************ Extra: Ajuste para pantallas muy pequeñas ************/
+@media (max-width: 400px) {
+  .skill h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill p {
+    font-size: 0.9rem;
+  }
+
+  .skill-slider .item img {
+    width: 60px;
+    height: 60px;
+  }
+}

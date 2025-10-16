@@ -4,6 +4,7 @@ import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from "@emailjs/browser";
+import './Contact.css';
 
 export const Contact = () => {
   const [buttonText, setButtonText] = useState('Enviar');

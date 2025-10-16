@@ -4,6 +4,7 @@ import headerImg from '../assets/img/jorge.png';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import './Banner.css';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -47,42 +48,51 @@ export const Banner = () => {
     }
   };
 
-  return (
-    <section className="banner" id="home">
-      <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi! I'm Jorge Iván Sierra `} 
-                    <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Junior Software Developer", "Mobile & Web Developer", "Data Analysis Enthusiast" ]'>
-                      <span className="wrap">{text}</span>
-                    </span>
-                  </h1>
-                  <p>
-                    Soy un desarrollador junior apasionado por la tecnología y las soluciones innovadoras. 
-                    Mi enfoque combina habilidades de programación y análisis para ofrecer soluciones integrales 
-                    que ayudan a mis clientes a alcanzar sus objetivos.
-                  </p>
-                  <button onClick={() => console.log('connect')}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
-                </div>
-              }
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-  );
+return (
+  <section className="banner" id="home">
+    <Container>
+      <Row className="banner-content align-items-center">
+        {/* Columna del texto - en móvil será primera */}
+        <Col xs={12} lg={6} className="text-box order-1 order-lg-0">
+          <TrackVisibility>
+            {({ isVisible }) => (
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <span className="tagline">Welcome to my Portfolio</span>
+                <h1>
+                  {`Hi! I'm Jorge Iván Sierra`}
+                  <span
+                    className="txt-rotate"
+                    dataPeriod="1000"
+                    data-rotate='[ "Junior Software Developer", "Mobile & Web Developer", "Data Analysis Enthusiast" ]'
+                  >
+                    <span className="wrap">{text}</span>
+                  </span>
+                </h1>
+                <p>
+                  Soy un desarrollador junior apasionado por la tecnología y las soluciones innovadoras. 
+                  Mi enfoque combina habilidades de programación y análisis para ofrecer soluciones integrales 
+                  que ayudan a mis clientes a alcanzar sus objetivos.
+                </p>
+                <button onClick={() => console.log("connect")}>
+                  Let's Connect <ArrowRightCircle size={25} />
+                </button>
+              </div>
+            )}
+          </TrackVisibility>
+        </Col>
+
+        {/* Columna de la imagen - en móvil será segunda */}
+        <Col xs={12} lg={6} className="image-box order-0 order-lg-1 mb-4 mb-lg-0">
+          <TrackVisibility>
+            {({ isVisible }) => (
+              <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                <img src={headerImg} alt="Jorge Iván Sierra - Developer" />
+              </div>
+            )}
+          </TrackVisibility>
+        </Col>
+      </Row>
+    </Container>
+  </section>
+);
 };

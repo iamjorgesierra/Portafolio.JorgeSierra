@@ -15,7 +15,7 @@ export const Contact = () => {
     setButtonText("Enviando...");
 
     try {
-      await emailjs.sendForm('service_obgkwbp', 'template_rbsk8uq', e.target, 'FLDMtAKy_dNdoVjHw');
+      await emailjs.sendForm('service_upt5l4c', 'template_rbsk8uq', e.target, 'FLDMtAKy_dNdoVjHw');
       setStatus({ success: true, message: 'Mensaje enviado correctamente ✅' });
       e.target.reset();
     } catch (error) {

@@ -73,9 +73,9 @@ return (
                   Mi enfoque combina habilidades de programación y análisis para ofrecer soluciones integrales 
                   que ayudan a mis clientes a alcanzar sus objetivos.
                 </p>
-                <HashLink to='#connect'>
-                    <button className="vvd"><span>Let’s Connect</span></button>
-                </HashLink>
+                <button onClick={() => console.log("connect")}>
+                  Let's Connect <ArrowRightCircle size={25} />
+                </button>
               </div>
             )}
           </TrackVisibility>
